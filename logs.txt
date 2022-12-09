@@ -1,0 +1,1393 @@
+* 
+* ==> Audit <==
+* |--------------|-------------------|----------|---------|---------|----------------------|----------------------|
+|   Command    |       Args        | Profile  |  User   | Version |      Start Time      |       End Time       |
+|--------------|-------------------|----------|---------|---------|----------------------|----------------------|
+| start        |                   | minikube | betrand | v1.27.1 | 27 Oct 22 05:57 CEST | 27 Oct 22 06:07 CEST |
+| update-check |                   | minikube | betrand | v1.27.1 | 04 Nov 22 05:23 CET  | 04 Nov 22 05:23 CET  |
+| start        |                   | minikube | betrand | v1.28.0 | 05 Dec 22 21:09 CET  |                      |
+| docker-env   |                   | minikube | betrand | v1.28.0 | 08 Dec 22 13:56 CET  |                      |
+| docker-env   |                   | minikube | betrand | v1.28.0 | 08 Dec 22 13:57 CET  |                      |
+| start        |                   | minikube | betrand | v1.28.0 | 09 Dec 22 02:42 CET  |                      |
+| start        |                   | minikube | betrand | v1.28.0 | 09 Dec 22 02:48 CET  |                      |
+| start        |                   | minikube | betrand | v1.28.0 | 09 Dec 22 02:51 CET  |                      |
+| start        | --driver=docker   | minikube | betrand | v1.28.0 | 09 Dec 22 02:52 CET  |                      |
+| config       | set driver docker | minikube | betrand | v1.28.0 | 09 Dec 22 02:52 CET  | 09 Dec 22 02:52 CET  |
+| start        |                   | minikube | betrand | v1.28.0 | 09 Dec 22 03:00 CET  |                      |
+| start        |                   | minikube | betrand | v1.28.0 | 09 Dec 22 12:58 CET  |                      |
+|--------------|-------------------|----------|---------|---------|----------------------|----------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/12/09 12:58:36
+Running on machine: Njibamums-MacBook-Pro
+Binary: Built with gc go1.19.3 for darwin/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1209 12:58:36.417937   31687 out.go:296] Setting OutFile to fd 1 ...
+I1209 12:58:36.418506   31687 out.go:348] isatty.IsTerminal(1) = true
+I1209 12:58:36.418512   31687 out.go:309] Setting ErrFile to fd 2...
+I1209 12:58:36.418522   31687 out.go:348] isatty.IsTerminal(2) = true
+I1209 12:58:36.418678   31687 root.go:334] Updating PATH: /Users/betrand/.minikube/bin
+I1209 12:58:36.422262   31687 out.go:303] Setting JSON to false
+I1209 12:58:36.457805   31687 start.go:116] hostinfo: {"hostname":"Njibamums-MacBook-Pro.fritz.box","uptime":46830,"bootTime":1670540286,"procs":639,"os":"darwin","platform":"darwin","platformFamily":"Standalone Workstation","platformVersion":"13.1","kernelVersion":"22.2.0","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"be0ac50a-6df7-541e-b962-fd9c9466bb51"}
+W1209 12:58:36.457945   31687 start.go:124] gopshost.Virtualization returned error: not implemented yet
+I1209 12:58:36.480076   31687 out.go:177] 😄  minikube v1.28.0 on Darwin 13.1
+I1209 12:58:36.540983   31687 notify.go:220] Checking for updates...
+I1209 12:58:36.541888   31687 config.go:180] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.25.2
+I1209 12:58:36.565595   31687 out.go:177] 🆕  Kubernetes 1.25.3 is now available. If you would like to upgrade, specify: --kubernetes-version=v1.25.3
+I1209 12:58:36.589326   31687 driver.go:365] Setting default libvirt URI to qemu:///system
+I1209 12:58:36.823306   31687 docker.go:137] docker version: linux-22.06.0-beta.0-407-g7a5cce156e.m
+I1209 12:58:36.823480   31687 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I1209 12:58:37.782216   31687 info.go:266] docker info: {ID:57e8694a-f7ba-43da-8309-8e9cf7cc2347 Containers:20 ContainersRunning:18 ContainersPaused:0 ContainersStopped:2 Images:12 Driver:stargz DriverStatus:[[driver-type io.containerd.snapshotter.v1]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:148 OomKillDisable:false NGoroutines:130 SystemTime:2022-12-09 11:58:36.886488981 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:4 KernelVersion:5.15.49-linuxkit OperatingSystem:Docker Desktop OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:8 MemTotal:8240328704 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy:http.docker.internal:3128 HTTPSProxy:http.docker.internal:3128 NoProxy:hubproxy.docker.internal Name:docker-desktop Labels:[] ExperimentalBuild:false ServerVersion:22.06.0-beta.0-407-g7a5cce156e.m ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:1c90a442489720eec95342e1789ee8a5e1b9536f Expected:1c90a442489720eec95342e1789ee8a5e1b9536f} RuncCommit:{ID:v1.1.4-0-g5fd4c4d Expected:v1.1.4-0-g5fd4c4d} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=seccomp,profile=builtin name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:buildx Path:/usr/local/lib/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.9.1] map[Name:compose Path:/usr/local/lib/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v2.12.2] map[Name:dev Path:/usr/local/lib/docker/cli-plugins/docker-dev SchemaVersion:0.1.0 ShortDescription:Docker Dev Environments Vendor:Docker Inc. Version:v0.0.3] map[Name:extension Path:/usr/local/lib/docker/cli-plugins/docker-extension SchemaVersion:0.1.0 ShortDescription:Manages Docker extensions Vendor:Docker Inc. Version:v0.2.13] map[Name:sbom Path:/usr/local/lib/docker/cli-plugins/docker-sbom SchemaVersion:0.1.0 ShortDescription:View the packaged-based Software Bill Of Materials (SBOM) for an image URL:https://github.com/docker/sbom-cli-plugin Vendor:Anchore Inc. Version:0.6.0] map[Name:scan Path:/usr/local/lib/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.21.0]] Warnings:<nil>}}
+I1209 12:58:37.825642   31687 out.go:177] ✨  Using the docker driver based on existing profile
+I1209 12:58:37.847371   31687 start.go:282] selected driver: docker
+I1209 12:58:37.847385   31687 start.go:808] validating driver "docker" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:docker.io/kicbase/stable:v0.0.35 Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.2 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.25.2 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath:/opt/socket_vmnet/bin/socket_vmnet_client SocketVMnetPath:/var/run/socket_vmnet}
+I1209 12:58:37.847514   31687 start.go:819] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I1209 12:58:37.847753   31687 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I1209 12:58:38.034943   31687 info.go:266] docker info: {ID:57e8694a-f7ba-43da-8309-8e9cf7cc2347 Containers:20 ContainersRunning:18 ContainersPaused:0 ContainersStopped:2 Images:12 Driver:stargz DriverStatus:[[driver-type io.containerd.snapshotter.v1]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:148 OomKillDisable:false NGoroutines:130 SystemTime:2022-12-09 11:58:37.913577347 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:4 KernelVersion:5.15.49-linuxkit OperatingSystem:Docker Desktop OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:8 MemTotal:8240328704 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy:http.docker.internal:3128 HTTPSProxy:http.docker.internal:3128 NoProxy:hubproxy.docker.internal Name:docker-desktop Labels:[] ExperimentalBuild:false ServerVersion:22.06.0-beta.0-407-g7a5cce156e.m ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:1c90a442489720eec95342e1789ee8a5e1b9536f Expected:1c90a442489720eec95342e1789ee8a5e1b9536f} RuncCommit:{ID:v1.1.4-0-g5fd4c4d Expected:v1.1.4-0-g5fd4c4d} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=seccomp,profile=builtin name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:buildx Path:/usr/local/lib/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.9.1] map[Name:compose Path:/usr/local/lib/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v2.12.2] map[Name:dev Path:/usr/local/lib/docker/cli-plugins/docker-dev SchemaVersion:0.1.0 ShortDescription:Docker Dev Environments Vendor:Docker Inc. Version:v0.0.3] map[Name:extension Path:/usr/local/lib/docker/cli-plugins/docker-extension SchemaVersion:0.1.0 ShortDescription:Manages Docker extensions Vendor:Docker Inc. Version:v0.2.13] map[Name:sbom Path:/usr/local/lib/docker/cli-plugins/docker-sbom SchemaVersion:0.1.0 ShortDescription:View the packaged-based Software Bill Of Materials (SBOM) for an image URL:https://github.com/docker/sbom-cli-plugin Vendor:Anchore Inc. Version:0.6.0] map[Name:scan Path:/usr/local/lib/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.21.0]] Warnings:<nil>}}
+W1209 12:58:38.035736   31687 out.go:239] ❗  docker is currently using the stargz storage driver, consider switching to overlay2 for better performance
+I1209 12:58:38.035966   31687 cni.go:95] Creating CNI manager for ""
+I1209 12:58:38.035975   31687 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I1209 12:58:38.035991   31687 start_flags.go:317] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:docker.io/kicbase/stable:v0.0.35 Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.2 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.25.2 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath:/opt/socket_vmnet/bin/socket_vmnet_client SocketVMnetPath:/var/run/socket_vmnet}
+I1209 12:58:38.117060   31687 out.go:177] 👍  Starting control plane node minikube in cluster minikube
+I1209 12:58:38.138818   31687 cache.go:120] Beginning downloading kic base image for docker with docker
+I1209 12:58:38.176127   31687 out.go:177] 🚜  Pulling base image ...
+I1209 12:58:38.212910   31687 preload.go:132] Checking if preload exists for k8s version v1.25.2 and runtime docker
+I1209 12:58:38.212935   31687 image.go:76] Checking for docker.io/kicbase/stable:v0.0.35 in local docker daemon
+I1209 12:58:38.213064   31687 profile.go:148] Saving config to /Users/betrand/.minikube/profiles/minikube/config.json ...
+I1209 12:58:38.215839   31687 cache.go:107] acquiring lock: {Name:mk14f9811344775de2ee0b5c1627667fcda1760f Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.215857   31687 cache.go:107] acquiring lock: {Name:mk207087f4be26ce7d3e33485ae79f58b669d46f Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.215912   31687 cache.go:107] acquiring lock: {Name:mka586fa9ccb3b7e9e2f4ed0e9d42fb9b70f577a Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.215919   31687 cache.go:107] acquiring lock: {Name:mk8444db9ca3b8a498a6aea56bf70254252fd486 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.215951   31687 cache.go:107] acquiring lock: {Name:mk394029f7795360596f0cc29c051abd8fdf5202 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.215971   31687 cache.go:107] acquiring lock: {Name:mke52363aaf6776ac1e5d109d1eb67c03032c145 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.216043   31687 cache.go:107] acquiring lock: {Name:mkd717adc0463d51600b1cfb6141c8e2915e6819 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.216065   31687 cache.go:107] acquiring lock: {Name:mk4efafac1faad3e579fb5391100c7ac5faa3c40 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.216105   31687 cache.go:115] /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/coredns/coredns_v1.9.3 exists
+I1209 12:58:38.216123   31687 cache.go:115] /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/pause_3.8 exists
+I1209 12:58:38.216123   31687 cache.go:96] cache image "registry.k8s.io/coredns/coredns:v1.9.3" -> "/Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/coredns/coredns_v1.9.3" took 212.617µs
+I1209 12:58:38.216144   31687 cache.go:115] /Users/betrand/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5 exists
+I1209 12:58:38.216146   31687 cache.go:80] save to tar file registry.k8s.io/coredns/coredns:v1.9.3 -> /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/coredns/coredns_v1.9.3 succeeded
+I1209 12:58:38.216146   31687 cache.go:96] cache image "registry.k8s.io/pause:3.8" -> "/Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/pause_3.8" took 448.841µs
+I1209 12:58:38.216157   31687 cache.go:96] cache image "gcr.io/k8s-minikube/storage-provisioner:v5" -> "/Users/betrand/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5" took 1.735296ms
+I1209 12:58:38.216161   31687 cache.go:80] save to tar file registry.k8s.io/pause:3.8 -> /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/pause_3.8 succeeded
+I1209 12:58:38.216163   31687 cache.go:80] save to tar file gcr.io/k8s-minikube/storage-provisioner:v5 -> /Users/betrand/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5 succeeded
+I1209 12:58:38.216189   31687 cache.go:115] /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-proxy_v1.25.2 exists
+I1209 12:58:38.216198   31687 cache.go:96] cache image "registry.k8s.io/kube-proxy:v1.25.2" -> "/Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-proxy_v1.25.2" took 237.844µs
+I1209 12:58:38.216204   31687 cache.go:80] save to tar file registry.k8s.io/kube-proxy:v1.25.2 -> /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-proxy_v1.25.2 succeeded
+I1209 12:58:38.216484   31687 cache.go:115] /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-scheduler_v1.25.2 exists
+I1209 12:58:38.216498   31687 cache.go:96] cache image "registry.k8s.io/kube-scheduler:v1.25.2" -> "/Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-scheduler_v1.25.2" took 673.027µs
+I1209 12:58:38.216508   31687 cache.go:80] save to tar file registry.k8s.io/kube-scheduler:v1.25.2 -> /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-scheduler_v1.25.2 succeeded
+I1209 12:58:38.216655   31687 image.go:134] retrieving image: registry.k8s.io/kube-controller-manager:v1.25.2
+I1209 12:58:38.216657   31687 image.go:134] retrieving image: registry.k8s.io/kube-apiserver:v1.25.2
+I1209 12:58:38.216655   31687 image.go:134] retrieving image: registry.k8s.io/etcd:3.5.4-0
+I1209 12:58:38.222882   31687 image.go:177] daemon lookup for registry.k8s.io/kube-controller-manager:v1.25.2: Error: No such image: registry.k8s.io/kube-controller-manager:v1.25.2
+I1209 12:58:38.224419   31687 image.go:177] daemon lookup for registry.k8s.io/kube-apiserver:v1.25.2: Error: No such image: registry.k8s.io/kube-apiserver:v1.25.2
+I1209 12:58:38.224540   31687 image.go:177] daemon lookup for registry.k8s.io/etcd:3.5.4-0: Error: No such image: registry.k8s.io/etcd:3.5.4-0
+I1209 12:58:38.395639   31687 image.go:80] Found docker.io/kicbase/stable:v0.0.35 in local docker daemon, skipping pull
+I1209 12:58:38.395671   31687 cache.go:142] docker.io/kicbase/stable:v0.0.35 exists in daemon, skipping load
+I1209 12:58:38.395704   31687 cache.go:208] Successfully downloaded all kic artifacts
+I1209 12:58:38.395786   31687 start.go:364] acquiring machines lock for minikube: {Name:mkb19ca321eb6f6da28a65ae093c2166fd697dc7 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:58:38.395877   31687 start.go:368] acquired machines lock for "minikube" in 80.991µs
+I1209 12:58:38.395920   31687 start.go:96] Skipping create...Using existing machine configuration
+I1209 12:58:38.395929   31687 fix.go:55] fixHost starting: 
+I1209 12:58:38.396164   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:38.469640   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:38.469700   31687 fix.go:103] recreateIfNeeded on minikube: state= err=unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:38.469718   31687 fix.go:108] machineExists: false. err=machine does not exist
+I1209 12:58:38.548074   31687 out.go:177] 🤷  docker "minikube" container is missing, will recreate.
+I1209 12:58:38.569896   31687 delete.go:124] DEMOLISHING minikube ...
+I1209 12:58:38.570055   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:38.641760   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+W1209 12:58:38.641823   31687 stop.go:75] unable to get state: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:38.641835   31687 delete.go:129] stophost failed (probably ok): ssh power off: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:38.642244   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:38.711377   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:38.711424   31687 delete.go:82] Unable to get host status for minikube, assuming it has already been deleted: state: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:38.711543   31687 cli_runner.go:164] Run: docker container inspect -f {{.Id}} minikube
+W1209 12:58:38.782227   31687 cli_runner.go:211] docker container inspect -f {{.Id}} minikube returned with exit code 1
+I1209 12:58:38.782260   31687 kic.go:356] could not find the container minikube to remove it. will try anyways
+I1209 12:58:38.782348   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:38.851182   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+W1209 12:58:38.851592   31687 oci.go:84] error getting container status, will try to delete anyways: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:38.851695   31687 cli_runner.go:164] Run: docker exec --privileged -t minikube /bin/bash -c "sudo init 0"
+W1209 12:58:38.925555   31687 cli_runner.go:211] docker exec --privileged -t minikube /bin/bash -c "sudo init 0" returned with exit code 1
+I1209 12:58:38.925949   31687 oci.go:646] error shutdown minikube: docker exec --privileged -t minikube /bin/bash -c "sudo init 0": exit status 1
+stdout:
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:39.926942   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:39.995754   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:39.995804   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:39.995812   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:39.995841   31687 retry.go:31] will retry after 552.330144ms: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:40.371628   31687 cache.go:161] opening:  /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-apiserver_v1.25.2
+I1209 12:58:40.474508   31687 cache.go:161] opening:  /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/etcd_3.5.4-0
+I1209 12:58:40.548556   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1209 12:58:40.599161   31687 cache.go:161] opening:  /Users/betrand/.minikube/cache/images/amd64/registry.k8s.io/kube-controller-manager_v1.25.2
+W1209 12:58:40.620633   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:40.620691   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:40.620697   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:40.620716   31687 retry.go:31] will retry after 1.080381816s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:41.701291   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:41.776679   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:41.776729   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:41.776735   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:41.776754   31687 retry.go:31] will retry after 1.31013006s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:43.087866   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:43.159850   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:43.159890   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:43.159895   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:43.159916   31687 retry.go:31] will retry after 1.582392691s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:44.742646   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:44.815105   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:44.815148   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:44.815155   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:44.815184   31687 retry.go:31] will retry after 2.340488664s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:47.155986   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:47.226927   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:47.226973   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:47.226980   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:47.226998   31687 retry.go:31] will retry after 4.506218855s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:51.733543   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:51.806015   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:51.806061   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:51.806067   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:51.806087   31687 retry.go:31] will retry after 3.221479586s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:55.028244   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W1209 12:58:55.108259   31687 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I1209 12:58:55.108304   31687 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I1209 12:58:55.108324   31687 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I1209 12:58:55.108350   31687 oci.go:88] couldn't shut down minikube (might be okay): verify shutdown: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+ 
+I1209 12:58:55.108450   31687 cli_runner.go:164] Run: docker rm -f -v minikube
+I1209 12:58:55.183383   31687 cli_runner.go:164] Run: docker container inspect -f {{.Id}} minikube
+W1209 12:58:55.250753   31687 cli_runner.go:211] docker container inspect -f {{.Id}} minikube returned with exit code 1
+I1209 12:58:55.251213   31687 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I1209 12:58:55.324909   31687 cli_runner.go:164] Run: docker network rm minikube
+W1209 12:58:55.474953   31687 delete.go:139] delete failed (probably ok) <nil>
+I1209 12:58:55.474969   31687 fix.go:115] Sleeping 1 second for extra luck!
+I1209 12:58:56.475430   31687 start.go:125] createHost starting for "" (driver="docker")
+I1209 12:58:56.496681   31687 out.go:204] 🔥  Creating docker container (CPUs=2, Memory=4000MB) ...
+I1209 12:58:56.497498   31687 start.go:159] libmachine.API.Create for "minikube" (driver="docker")
+I1209 12:58:56.498203   31687 client.go:168] LocalClient.Create starting
+I1209 12:58:56.499698   31687 main.go:134] libmachine: Reading certificate data from /Users/betrand/.minikube/certs/ca.pem
+I1209 12:58:56.500270   31687 main.go:134] libmachine: Decoding PEM data...
+I1209 12:58:56.500614   31687 main.go:134] libmachine: Parsing certificate...
+I1209 12:58:56.502138   31687 main.go:134] libmachine: Reading certificate data from /Users/betrand/.minikube/certs/cert.pem
+I1209 12:58:56.502413   31687 main.go:134] libmachine: Decoding PEM data...
+I1209 12:58:56.502427   31687 main.go:134] libmachine: Parsing certificate...
+I1209 12:58:56.519029   31687 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W1209 12:58:56.589128   31687 cli_runner.go:211] docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I1209 12:58:56.589246   31687 network_create.go:272] running [docker network inspect minikube] to gather additional debugging logs...
+I1209 12:58:56.589264   31687 cli_runner.go:164] Run: docker network inspect minikube
+W1209 12:58:56.657440   31687 cli_runner.go:211] docker network inspect minikube returned with exit code 1
+I1209 12:58:56.657462   31687 network_create.go:275] error running [docker network inspect minikube]: docker network inspect minikube: exit status 1
+stdout:
+[]
+
+stderr:
+Error: No such network: minikube
+I1209 12:58:56.657478   31687 network_create.go:277] output of [docker network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Error: No such network: minikube
+
+** /stderr **
+I1209 12:58:56.657575   31687 cli_runner.go:164] Run: docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I1209 12:58:56.726911   31687 network.go:295] reserving subnet 192.168.49.0 for 1m0s: &{mu:{state:0 sema:0} read:{v:{m:map[] amended:true}} dirty:map[192.168.49.0:0xc00052c350] misses:0}
+I1209 12:58:56.726953   31687 network.go:241] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I1209 12:58:56.726967   31687 network_create.go:115] attempt to create docker network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 1500 ...
+I1209 12:58:56.727064   31687 cli_runner.go:164] Run: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc -o com.docker.network.driver.mtu=1500 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+I1209 12:58:56.839763   31687 network_create.go:99] docker network minikube 192.168.49.0/24 created
+I1209 12:58:56.839825   31687 kic.go:106] calculated static IP "192.168.49.2" for the "minikube" container
+I1209 12:58:56.840278   31687 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+I1209 12:58:56.956279   31687 cli_runner.go:164] Run: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+I1209 12:58:57.022772   31687 oci.go:103] Successfully created a docker volume minikube
+I1209 12:58:57.022914   31687 cli_runner.go:164] Run: docker run --rm --name minikube-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --entrypoint /usr/bin/test -v minikube:/var docker.io/kicbase/stable:v0.0.35 -d /var/lib
+I1209 12:58:57.641043   31687 oci.go:107] Successfully prepared a docker volume minikube
+I1209 12:58:57.641089   31687 preload.go:132] Checking if preload exists for k8s version v1.25.2 and runtime docker
+I1209 12:58:57.641630   31687 cli_runner.go:164] Run: docker info --format "'{{json .SecurityOptions}}'"
+I1209 12:58:58.652358   31687 cli_runner.go:217] Completed: docker info --format "'{{json .SecurityOptions}}'": (1.010649523s)
+I1209 12:58:58.652664   31687 cli_runner.go:164] Run: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname minikube --name minikube --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=minikube --network minikube --ip 192.168.49.2 --volume minikube:/var --security-opt apparmor=unconfined --memory=4000mb --memory-swap=4000mb --cpus=2 -e container=docker --expose 8443 --publish=8443 --publish=22 --publish=2376 --publish=5000 --publish=32443 docker.io/kicbase/stable:v0.0.35
+I1209 12:58:59.203095   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Running}}
+I1209 12:58:59.276390   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1209 12:58:59.351449   31687 cli_runner.go:164] Run: docker exec minikube stat /var/lib/dpkg/alternatives/iptables
+I1209 12:58:59.487634   31687 oci.go:144] the created container "minikube" has a running status.
+I1209 12:58:59.487656   31687 kic.go:210] Creating ssh key for kic: /Users/betrand/.minikube/machines/minikube/id_rsa...
+I1209 12:58:59.590567   31687 kic_runner.go:191] docker (temp): /Users/betrand/.minikube/machines/minikube/id_rsa.pub --> /home/docker/.ssh/authorized_keys (381 bytes)
+I1209 12:58:59.769399   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1209 12:58:59.844817   31687 kic_runner.go:93] Run: chown docker:docker /home/docker/.ssh/authorized_keys
+I1209 12:58:59.844836   31687 kic_runner.go:114] Args: [docker exec --privileged minikube chown docker:docker /home/docker/.ssh/authorized_keys]
+I1209 12:59:00.020304   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1209 12:59:00.105745   31687 machine.go:88] provisioning docker machine ...
+I1209 12:59:00.106645   31687 ubuntu.go:169] provisioning hostname "minikube"
+I1209 12:59:00.106986   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:00.196839   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:00.199267   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:00.199277   31687 main.go:134] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1209 12:59:00.374521   31687 main.go:134] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1209 12:59:00.374908   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:00.445987   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:00.446176   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:00.446194   31687 main.go:134] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1209 12:59:00.574096   31687 main.go:134] libmachine: SSH cmd err, output: <nil>: 
+I1209 12:59:00.574113   31687 ubuntu.go:175] set auth options {CertDir:/Users/betrand/.minikube CaCertPath:/Users/betrand/.minikube/certs/ca.pem CaPrivateKeyPath:/Users/betrand/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/Users/betrand/.minikube/machines/server.pem ServerKeyPath:/Users/betrand/.minikube/machines/server-key.pem ClientKeyPath:/Users/betrand/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/Users/betrand/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/Users/betrand/.minikube}
+I1209 12:59:00.574134   31687 ubuntu.go:177] setting up certificates
+I1209 12:59:00.574817   31687 provision.go:83] configureAuth start
+I1209 12:59:00.574914   31687 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1209 12:59:00.643983   31687 provision.go:138] copyHostCerts
+I1209 12:59:00.644076   31687 exec_runner.go:144] found /Users/betrand/.minikube/ca.pem, removing ...
+I1209 12:59:00.644083   31687 exec_runner.go:207] rm: /Users/betrand/.minikube/ca.pem
+I1209 12:59:00.644202   31687 exec_runner.go:151] cp: /Users/betrand/.minikube/certs/ca.pem --> /Users/betrand/.minikube/ca.pem (1078 bytes)
+I1209 12:59:00.644414   31687 exec_runner.go:144] found /Users/betrand/.minikube/cert.pem, removing ...
+I1209 12:59:00.644417   31687 exec_runner.go:207] rm: /Users/betrand/.minikube/cert.pem
+I1209 12:59:00.644504   31687 exec_runner.go:151] cp: /Users/betrand/.minikube/certs/cert.pem --> /Users/betrand/.minikube/cert.pem (1123 bytes)
+I1209 12:59:00.644687   31687 exec_runner.go:144] found /Users/betrand/.minikube/key.pem, removing ...
+I1209 12:59:00.644691   31687 exec_runner.go:207] rm: /Users/betrand/.minikube/key.pem
+I1209 12:59:00.644764   31687 exec_runner.go:151] cp: /Users/betrand/.minikube/certs/key.pem --> /Users/betrand/.minikube/key.pem (1679 bytes)
+I1209 12:59:00.645194   31687 provision.go:112] generating server cert: /Users/betrand/.minikube/machines/server.pem ca-key=/Users/betrand/.minikube/certs/ca.pem private-key=/Users/betrand/.minikube/certs/ca-key.pem org=betrand.minikube san=[192.168.49.2 127.0.0.1 localhost 127.0.0.1 minikube minikube]
+I1209 12:59:00.977502   31687 provision.go:172] copyRemoteCerts
+I1209 12:59:00.978341   31687 ssh_runner.go:195] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I1209 12:59:00.978394   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:01.048348   31687 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51199 SSHKeyPath:/Users/betrand/.minikube/machines/minikube/id_rsa Username:docker}
+I1209 12:59:01.139814   31687 ssh_runner.go:362] scp /Users/betrand/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1078 bytes)
+I1209 12:59:01.162217   31687 ssh_runner.go:362] scp /Users/betrand/.minikube/machines/server.pem --> /etc/docker/server.pem (1204 bytes)
+I1209 12:59:01.183520   31687 ssh_runner.go:362] scp /Users/betrand/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I1209 12:59:01.205035   31687 provision.go:86] duration metric: configureAuth took 630.189286ms
+I1209 12:59:01.205045   31687 ubuntu.go:193] setting minikube options for container-runtime
+I1209 12:59:01.205547   31687 config.go:180] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.25.2
+I1209 12:59:01.205615   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:01.273989   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:01.274180   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:01.274194   31687 main.go:134] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I1209 12:59:01.401794   31687 main.go:134] libmachine: SSH cmd err, output: <nil>: overlay
+
+I1209 12:59:01.401813   31687 ubuntu.go:71] root file system type: overlay
+I1209 12:59:01.402300   31687 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I1209 12:59:01.402381   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:01.472307   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:01.472487   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:01.472549   31687 main.go:134] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I1209 12:59:01.608780   31687 main.go:134] libmachine: SSH cmd err, output: Process exited with status 1: tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I1209 12:59:01.608803   31687 ubuntu.go:195] Error setting container-runtime options during provisioning ssh command error:
+command : sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+err     : Process exited with status 1
+output  : tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+I1209 12:59:01.608813   31687 machine.go:91] provisioned docker machine in 1.5030293s
+I1209 12:59:01.608820   31687 client.go:171] LocalClient.Create took 5.11053869s
+I1209 12:59:03.609094   31687 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1209 12:59:03.609148   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:03.698477   31687 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51199 SSHKeyPath:/Users/betrand/.minikube/machines/minikube/id_rsa Username:docker}
+I1209 12:59:03.794017   31687 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I1209 12:59:03.799335   31687 start.go:128] duration metric: createHost completed in 7.323783307s
+I1209 12:59:03.799435   31687 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1209 12:59:03.799494   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:03.870133   31687 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51199 SSHKeyPath:/Users/betrand/.minikube/machines/minikube/id_rsa Username:docker}
+I1209 12:59:03.957849   31687 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I1209 12:59:03.963254   31687 fix.go:57] fixHost completed within 25.566950382s
+I1209 12:59:03.963263   31687 start.go:83] releasing machines lock for "minikube", held for 25.567007313s
+W1209 12:59:03.964061   31687 start.go:603] error starting host: recreate: creating host: create: provisioning: ssh command error:
+command : sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+err     : Process exited with status 1
+output  : tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+W1209 12:59:03.965664   31687 out.go:239] 🤦  StartHost failed, but will try again: recreate: creating host: create: provisioning: ssh command error:
+command : sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+err     : Process exited with status 1
+output  : tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I1209 12:59:03.967528   31687 start.go:618] Will try again in 5 seconds ...
+I1209 12:59:08.967821   31687 start.go:364] acquiring machines lock for minikube: {Name:mkb19ca321eb6f6da28a65ae093c2166fd697dc7 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1209 12:59:08.968000   31687 start.go:368] acquired machines lock for "minikube" in 153.322µs
+I1209 12:59:08.968859   31687 start.go:96] Skipping create...Using existing machine configuration
+I1209 12:59:08.968875   31687 fix.go:55] fixHost starting: 
+I1209 12:59:08.969620   31687 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1209 12:59:09.044420   31687 fix.go:103] recreateIfNeeded on minikube: state=Running err=<nil>
+W1209 12:59:09.044441   31687 fix.go:129] unexpected machine state, will restart: <nil>
+I1209 12:59:09.066959   31687 out.go:177] 🏃  Updating the running docker "minikube" container ...
+I1209 12:59:09.110324   31687 machine.go:88] provisioning docker machine ...
+I1209 12:59:09.110370   31687 ubuntu.go:169] provisioning hostname "minikube"
+I1209 12:59:09.110500   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:09.180430   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:09.180615   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:09.180631   31687 main.go:134] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1209 12:59:09.320501   31687 main.go:134] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1209 12:59:09.320580   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:09.389996   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:09.390186   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:09.390202   31687 main.go:134] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1209 12:59:09.518698   31687 main.go:134] libmachine: SSH cmd err, output: <nil>: 
+I1209 12:59:09.518712   31687 ubuntu.go:175] set auth options {CertDir:/Users/betrand/.minikube CaCertPath:/Users/betrand/.minikube/certs/ca.pem CaPrivateKeyPath:/Users/betrand/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/Users/betrand/.minikube/machines/server.pem ServerKeyPath:/Users/betrand/.minikube/machines/server-key.pem ClientKeyPath:/Users/betrand/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/Users/betrand/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/Users/betrand/.minikube}
+I1209 12:59:09.518723   31687 ubuntu.go:177] setting up certificates
+I1209 12:59:09.518729   31687 provision.go:83] configureAuth start
+I1209 12:59:09.518816   31687 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1209 12:59:09.590668   31687 provision.go:138] copyHostCerts
+I1209 12:59:09.590788   31687 exec_runner.go:144] found /Users/betrand/.minikube/ca.pem, removing ...
+I1209 12:59:09.590792   31687 exec_runner.go:207] rm: /Users/betrand/.minikube/ca.pem
+I1209 12:59:09.590910   31687 exec_runner.go:151] cp: /Users/betrand/.minikube/certs/ca.pem --> /Users/betrand/.minikube/ca.pem (1078 bytes)
+I1209 12:59:09.591141   31687 exec_runner.go:144] found /Users/betrand/.minikube/cert.pem, removing ...
+I1209 12:59:09.591145   31687 exec_runner.go:207] rm: /Users/betrand/.minikube/cert.pem
+I1209 12:59:09.591234   31687 exec_runner.go:151] cp: /Users/betrand/.minikube/certs/cert.pem --> /Users/betrand/.minikube/cert.pem (1123 bytes)
+I1209 12:59:09.591425   31687 exec_runner.go:144] found /Users/betrand/.minikube/key.pem, removing ...
+I1209 12:59:09.591435   31687 exec_runner.go:207] rm: /Users/betrand/.minikube/key.pem
+I1209 12:59:09.591503   31687 exec_runner.go:151] cp: /Users/betrand/.minikube/certs/key.pem --> /Users/betrand/.minikube/key.pem (1679 bytes)
+I1209 12:59:09.591660   31687 provision.go:112] generating server cert: /Users/betrand/.minikube/machines/server.pem ca-key=/Users/betrand/.minikube/certs/ca.pem private-key=/Users/betrand/.minikube/certs/ca-key.pem org=betrand.minikube san=[192.168.49.2 127.0.0.1 localhost 127.0.0.1 minikube minikube]
+I1209 12:59:09.740545   31687 provision.go:172] copyRemoteCerts
+I1209 12:59:09.740945   31687 ssh_runner.go:195] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I1209 12:59:09.740995   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:09.811408   31687 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51199 SSHKeyPath:/Users/betrand/.minikube/machines/minikube/id_rsa Username:docker}
+I1209 12:59:09.904866   31687 ssh_runner.go:362] scp /Users/betrand/.minikube/machines/server.pem --> /etc/docker/server.pem (1204 bytes)
+I1209 12:59:09.925352   31687 ssh_runner.go:362] scp /Users/betrand/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1675 bytes)
+I1209 12:59:09.945852   31687 ssh_runner.go:362] scp /Users/betrand/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1078 bytes)
+I1209 12:59:09.965898   31687 provision.go:86] duration metric: configureAuth took 447.156212ms
+I1209 12:59:09.965908   31687 ubuntu.go:193] setting minikube options for container-runtime
+I1209 12:59:09.966053   31687 config.go:180] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.25.2
+I1209 12:59:09.966123   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:10.036883   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:10.037069   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:10.037082   31687 main.go:134] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I1209 12:59:10.163570   31687 main.go:134] libmachine: SSH cmd err, output: <nil>: overlay
+
+I1209 12:59:10.163579   31687 ubuntu.go:71] root file system type: overlay
+I1209 12:59:10.163759   31687 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I1209 12:59:10.163855   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:10.232300   31687 main.go:134] libmachine: Using SSH client type: native
+I1209 12:59:10.232473   31687 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x1003edea0] 0x1003f1020 <nil>  [] 0s} 127.0.0.1 51199 <nil> <nil>}
+I1209 12:59:10.232529   31687 main.go:134] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I1209 12:59:10.370310   31687 main.go:134] libmachine: SSH cmd err, output: Process exited with status 1: tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I1209 12:59:10.370335   31687 ubuntu.go:195] Error setting container-runtime options during provisioning ssh command error:
+command : sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+err     : Process exited with status 1
+output  : tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+I1209 12:59:10.370348   31687 machine.go:91] provisioned docker machine in 1.259999272s
+I1209 12:59:10.371225   31687 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1209 12:59:10.371292   31687 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1209 12:59:10.442170   31687 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51199 SSHKeyPath:/Users/betrand/.minikube/machines/minikube/id_rsa Username:docker}
+I1209 12:59:10.532603   31687 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I1209 12:59:10.538207   31687 fix.go:57] fixHost completed within 1.569308837s
+I1209 12:59:10.538215   31687 start.go:83] releasing machines lock for "minikube", held for 1.570184552s
+W1209 12:59:10.539129   31687 out.go:239] 😿  Failed to start docker container. Running "minikube delete" may fix it: provision: ssh command error:
+command : sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+err     : Process exited with status 1
+output  : tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I1209 12:59:10.584622   31687 out.go:177] 
+W1209 12:59:10.622679   31687 out.go:239] ❌  Exiting due to GUEST_PROVISION: Failed to start host: provision: ssh command error:
+command : sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+err     : Process exited with status 1
+output  : tee: /lib/systemd/system/docker.service.new: No such file or directory
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+W1209 12:59:10.624641   31687 out.go:239] 
+W1209 12:59:10.626745   31687 out.go:239] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I1209 12:59:10.756677   31687 out.go:177] 
+
+* 
+* ==> Docker <==
+* -- Logs begin at Fri 2022-12-09 11:58:59 UTC, end at Fri 2022-12-09 11:59:28 UTC. --
+Dec 09 11:58:59 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.153669402Z" level=info msg="Starting up"
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.162736913Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.162786760Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.162832017Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///run/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.162845228Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.174559221Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.174616621Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.174634096Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///run/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.174641083Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.180821664Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.190273989Z" level=info msg="Loading containers: start."
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.305015554Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.342639903Z" level=info msg="Loading containers: done."
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.388151275Z" level=info msg="Docker daemon" commit=e42327a graphdriver(s)=overlay2 version=20.10.18
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.388740763Z" level=info msg="Daemon has completed initialization"
+Dec 09 11:59:00 minikube systemd[1]: Started Docker Application Container Engine.
+Dec 09 11:59:00 minikube dockerd[134]: time="2022-12-09T11:59:00.465162881Z" level=info msg="API listen on /run/docker.sock"
+
+* 
+* ==> container status <==
+* time="2022-12-09T11:59:28Z" level=warning msg="runtime connect using default endpoints: [unix:///var/run/dockershim.sock unix:///run/containerd/containerd.sock unix:///run/crio/crio.sock]. As the default settings are now deprecated, you should set the endpoint instead."
+time="2022-12-09T11:59:30Z" level=error msg="connect endpoint 'unix:///var/run/dockershim.sock', make sure you are running as root and the endpoint has been started: context deadline exceeded"
+time="2022-12-09T11:59:30Z" level=warning msg="image connect using default endpoints: [unix:///var/run/dockershim.sock unix:///run/containerd/containerd.sock unix:///run/crio/crio.sock]. As the default settings are now deprecated, you should set the endpoint instead."
+time="2022-12-09T11:59:32Z" level=error msg="connect endpoint 'unix:///var/run/dockershim.sock', make sure you are running as root and the endpoint has been started: context deadline exceeded"
+time="2022-12-09T11:59:32Z" level=fatal msg="listing containers: rpc error: code = Unimplemented desc = unknown service runtime.v1alpha2.RuntimeService"
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+* 
+* ==> describe nodes <==
+* 
+* ==> dmesg <==
+* [Dec 9 10:09] PCI: Fatal: No config space access function found
+[  +0.125694] pci 0000:00:1f.0: BAR 13: [io  size 0x0080] has bogus alignment
+[  +0.046568] virtio-pci 0000:00:01.0: can't derive routing for PCI INT A
+[  +0.000004] virtio-pci 0000:00:01.0: PCI INT A: no GSI
+[  +0.002992] virtio-pci 0000:00:05.0: can't derive routing for PCI INT A
+[  +0.000004] virtio-pci 0000:00:05.0: PCI INT A: no GSI
+[  +0.003035] virtio-pci 0000:00:06.0: can't derive routing for PCI INT A
+[  +0.000004] virtio-pci 0000:00:06.0: PCI INT A: no GSI
+[  +0.002848] virtio-pci 0000:00:07.0: can't derive routing for PCI INT A
+[  +0.000003] virtio-pci 0000:00:07.0: PCI INT A: no GSI
+[  +0.005172] virtio-pci 0000:00:08.0: can't derive routing for PCI INT A
+[  +0.000003] virtio-pci 0000:00:08.0: PCI INT A: no GSI
+[  +0.004997] virtio-pci 0000:00:09.0: can't derive routing for PCI INT A
+[  +0.000004] virtio-pci 0000:00:09.0: PCI INT A: no GSI
+[  +0.004924] virtio-pci 0000:00:0a.0: can't derive routing for PCI INT A
+[  +0.000004] virtio-pci 0000:00:0a.0: PCI INT A: no GSI
+[  +0.005121] virtio-pci 0000:00:0b.0: can't derive routing for PCI INT A
+[  +0.000003] virtio-pci 0000:00:0b.0: PCI INT A: no GSI
+[  +0.004835] virtio-pci 0000:00:0c.0: can't derive routing for PCI INT A
+[  +0.000004] virtio-pci 0000:00:0c.0: PCI INT A: no GSI
+[  +0.003009] virtio-pci 0000:00:0d.0: can't derive routing for PCI INT A
+[  +0.000003] virtio-pci 0000:00:0d.0: PCI INT A: no GSI
+[  +0.011049] Hangcheck: starting hangcheck timer 0.9.1 (tick is 180 seconds, margin is 60 seconds).
+[  +0.026975] the cryptoloop driver has been deprecated and will be removed in in Linux 5.16
+[  +0.008736] lpc_ich 0000:00:1f.0: No MFD cells added
+[  +0.009615] fail to initialize ptp_kvm
+[  +0.000001] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[  +5.696594] grpcfuse: loading out-of-tree module taints kernel.
+[Dec 9 10:41] hrtimer: interrupt took 3004302 ns
+[Dec 9 11:58] overlayfs: lowerdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.002634] overlayfs: lowerdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.239184] overlayfs: upperdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.000006] overlayfs: workdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.019665] overlayfs: upperdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.000007] overlayfs: workdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.269487] overlayfs: lowerdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+[  +0.002000] overlayfs: lowerdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+
+* 
+* ==> kernel <==
+*  11:59:33 up  1:50,  0 users,  load average: 0.67, 0.65, 1.10
+Linux minikube 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 20.04.5 LTS"
+
+* 
+* ==> kubelet <==
+* -- Logs begin at Fri 2022-12-09 11:58:59 UTC, end at Fri 2022-12-09 11:59:33 UTC. --
+-- No entries --
+
