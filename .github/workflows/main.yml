@@ -38,18 +38,12 @@ jobs:
       - name: Build Image
         id: build-image
         if: github.event.inputs.skip-image-push != 'true'
-        run:  docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:$IMAGE_TAG .
-
-      - name: Tag Image
-        id: tag-image
-        if: github.event.inputs.skip-image-push != 'true'
-        run: docker tag ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:$IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+        run:  docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest .
       
       - name: Push Image
         id: push-image
         if: github.event.inputs.skip-image-push != 'true'
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:$IMAGE_TAG
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
       
   eks:
