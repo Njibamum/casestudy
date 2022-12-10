@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: case-study
-          image: case_study
+          image: betrand/case_study
           command:
             - python
             - -m
