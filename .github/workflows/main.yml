@@ -15,7 +15,7 @@ env:
   EKS_CLUSTER: "demo"
 
 jobs:
-  ecr:
+  docker:
     name: Build and Push
     runs-on: ubuntu-latest
     steps: 
@@ -55,6 +55,7 @@ jobs:
   eks:
     name: Kubectl Apply
     runs-on: ubuntu-latest
+    needs: docker
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
