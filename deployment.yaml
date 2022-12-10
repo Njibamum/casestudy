@@ -1,37 +1,37 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: python-french-case
-spec:
-  selector:
-    app: case_study
-  ports:
-  - protocol: "TCP"
-    port: 6000
-    targetPort: 5000
-  type: LoadBalancer
-
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python
+  name: case-study
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: case_study
-  replicas: 4
+      app: case-study
   template:
     metadata:
       labels:
-        app: case_study
+        app: case-study
     spec:
       containers:
-      - name: case_study
-        image: betrand/case_study:latest
-        imagePullPolicy: IfNotPresent
-        command:
-          - sleep
-          - "3600"
-        ports:
-        - containerPort: 5000
+        - name: case-study
+          image: case_study
+          command:
+            - python
+            - -m
+            - http.server
+          ports:
+            - containerPort: 8000
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: case-study
+spec:
+  selector:
+    app: case-study
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
