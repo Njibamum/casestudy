@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: case_study
-        image: case_study
+        image: betrand/case_study:latest
         imagePullPolicy: IfNotPresent
         command:
           - sleep
