@@ -16,12 +16,12 @@ spec:
       containers:
         - name: case-study
           image: betrand/case_study
-          command:
-            - python
-            - -m
-            - http.server
+          #command:
+          #  - python
+          #  - -m
+          #  - http.server
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
 ---
 # https://kubernetes.io/docs/concepts/services-networking/service/
 apiVersion: v1
@@ -34,5 +34,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8000
-  type: LoadBalancer
+      targetPort: 8080
+  type: NodePort
